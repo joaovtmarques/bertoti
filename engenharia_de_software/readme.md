@@ -21,7 +21,7 @@ Dessa forma, fica claro que podemos precisar distinguir as atividades de program
 <h2 style="color: #46FA7B">22/08/2022</h2>
 <br>
 
-# Projeto
+<p style="font-size: 26px; font-weight: 600;">Projeto</p>
 <p style="font-size: 20px; font-weight: 600;">WktFull</p>
 
 ### Sistema para gerenciamento de alunos e mensalidade de uma academia.

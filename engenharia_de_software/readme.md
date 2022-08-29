@@ -1,4 +1,4 @@
-<h1 style="color: #BD93F9; font-weight: bold">Engenharia de Software - Prof. Giuliano</h1>
+<h1 style="color: #BD93F9;">Engenharia de Software - Prof. Giuliano</h1>
 
 <h2 style="color: #46FA7B">15/08/2022</h2>
 
@@ -13,3 +13,38 @@ Em projetos de engenharia de software, os engenheiros precisam prestar muita ate
 Nas organizações de engenharia de software, precisamos nos concentrar mais em escala e eficiência, tanto para o software que produzimos quanto para as organizações que o produzem.
 A programação é, com certeza, uma parte de grande importância da engenharia de software: uma vez que é por meio dela que construímos um novo software.
 Dessa forma, fica claro que podemos precisar distinguir as atividades de programação (desenvolvimento) e atividades de engenharia de software (desenvolvimento, modificação, manutenção).
+
+<br>
+
+#
+
+<h2 style="color: #46FA7B">22/08/2022</h2>
+<br>
+
+# Projeto
+<p style="font-size: 20px; font-weight: 600;">WktFull</p>
+
+### Sistema para gerenciamento de alunos e mensalidade de uma academia.
+
+<br>
+
+
+<p style="font-size: 20px; font-weight: 600;">Requisitos</p>
+<p style="font-size: 16px;">Funcionais: </p>
+<p>- O atendente deve ser capaz de registrar um aluno</p>
+<p>- O atendente deve ser capaz de registrar a mensalidade de um aluno</p>
+<p>- O atendente deve ser capaz de consultar a mensalidade de um aluno</p>
+<p>- O atendente deve ser capaz de consultar um aluno por nome</p>
+
+<br>
+
+<p style="font-size: 16px;">Não funcionais: </p>
+<p>- O sistema deve rodar de forma responsiva em navegadores web</p>
+<p>- O sistema deve ser performático e de fácil acesso</p>
+<p>- O sistema deve ser feito em ReactJS</p>
+
+<br>
+
+<p style="font-size: 16px;">Diagrama de classe</p>
+
+<img src="images/22-08/uml.png">

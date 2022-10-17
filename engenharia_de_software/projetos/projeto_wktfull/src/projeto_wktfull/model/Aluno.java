@@ -1,25 +1,30 @@
-package projeto_wktfull;
+package model;
 
-import java.nio.charset.Charset;
-import java.util.Calendar;
-import java.util.Random;
+import java.util.List;
 
 public class Aluno {
   private int id;
   private String nome;
   private int idade;
   private double telefone;
-  private Mensalidade mensalidade;
 
   public Aluno(int id, String nome, int idade, double telefone) {
     this.id = id;
     this.nome = nome;
     this.idade = idade;
     this.telefone = telefone;
-    this.mensalidade = mensalidade;
   }
 
-  public Mensalidade buscarMensalidadePorId(int id) {
+  public Mensalidade buscarMensalidadePorId(Integer id) {
+    Academia ac = new Academia();
+    Mensalidade mensalidade = null;
+
+    for(Mensalidade m:ac.getMensalidades()) {
+      if(m.getId() == id) {
+        mensalidade = m;
+      }
+    }
+
     return mensalidade;
   }
 }

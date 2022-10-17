@@ -1,9 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMain.java to edit this template
- */
-package projeto_wktfull;
-
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -11,11 +5,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+import model.Academia;
+import model.Aluno;
 
-/**
- *
- * @author jvsil
- */
 public class Main extends Application {
     
     @Override
@@ -49,6 +41,10 @@ public class Main extends Application {
 
         Aluno a = new Aluno(1, "aluno 1",  1, 1230004000);
 
+
+        ac.setId(1);
+        ac.setNome("Academia WKTFull");
+        ac.setTelefone(1239058787);
         ac.cadastrarAluno(a);
     }
 

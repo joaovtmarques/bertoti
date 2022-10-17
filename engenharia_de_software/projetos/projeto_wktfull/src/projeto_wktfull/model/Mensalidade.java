@@ -1,4 +1,4 @@
-package projeto_wktfull;
+package model;
 
 public class Mensalidade {
   private int id;
@@ -12,21 +12,6 @@ public class Mensalidade {
     this.valor = valor;
     this.aluno = aluno;
   }
-
-  // public Mensalidade cadastrarMensalidade() {
-  //   Random random = new Random();
-
-  //   Calendar v = Calendar.getInstance();
-	// 	v.set(Calendar.MONTH, +1);
-
-  //   Mensalidade m = new Mensalidade(
-  //     id = random.nextInt(100),
-  //     v,
-  //     random.nextDouble()
-  //   );
-
-  //   return m;
-  // }
 
   public int getId() {
     return id;

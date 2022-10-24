@@ -7,6 +7,7 @@ import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import model.Academia;
 import model.Aluno;
+import model.Mensalidade;
 
 public class Main extends Application {
     
@@ -32,20 +33,33 @@ public class Main extends Application {
         primaryStage.show();
     }
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         
         Academia ac = new Academia();
 
-        Aluno a = new Aluno(1, "aluno 1",  1, 1230004000);
+        Aluno a = new Aluno(1, "aluno 1",  1, new Long(1230004000));
 
 
         ac.setId(1);
         ac.setNome("Academia WKTFull");
-        ac.setTelefone(1239058787);
-        ac.cadastrarAluno(a);
+        ac.setTelefone(new Long(1239058787));
+        ac.addAluno(a);
+
+        System.out.println("___________________________________");
+
+        for(Aluno al:ac.getAlunos()) {
+            System.out.println("Nome: "+al.getNome());
+            System.out.println("Idade: "+al.getIdade());
+            System.out.println("Telefone: "+al.getTelefone());
+        }
+
+        System.out.println("___________________________________");
+
+        for(Mensalidade ms:ac.getMensalidades()) {
+            System.out.println("Vencimento: "+ms.getVencimento());
+            System.out.println("Valor: "+ms.getValor());
+            System.out.println("Aluno: "+ms.getAluno().getNome());
+        }
     }
 
 }

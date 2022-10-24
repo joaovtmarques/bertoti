@@ -6,20 +6,32 @@ import java.util.List;
 public class Academia {
   private int id;
   private String nome;
-  private double telefone;
+  private Long telefone;
   private List<Aluno> alunos = new LinkedList<Aluno>();
-  private List<Mensalidade> mensalidades = new LinkedList();
+  private List<Mensalidade> mensalidades = new LinkedList<Mensalidade>();
 
   public Academia() {
   }
 
-  public void cadastrarAluno(Aluno aluno) {
+  public void addAluno(Aluno aluno) {
     alunos.add(aluno);
     
     
     Mensalidade mensalidade = new Mensalidade(1, "12/10/2022", 100.00, aluno);
 
     mensalidades.add(mensalidade);
+  }
+
+  public Aluno getAlunoByNome(String nome) {
+    Academia ac = new Academia();
+
+    for(Aluno a:ac.getAlunos()) {
+      if(a.getNome() == nome) {
+        return a;
+      }
+    }
+
+    return null;
   }
 
   public Integer getId(Integer id) {
@@ -38,11 +50,11 @@ public class Academia {
     this.nome = nome;
   }
 
-  public double getTelefone(double telefone) {
+  public Long getTelefone(Long telefone) {
     return telefone;
   }
 
-  public void setTelefone(double telefone) {
+  public void setTelefone(Long telefone) {
     this.telefone = telefone;
   }
 

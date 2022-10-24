@@ -36,4 +36,12 @@ public class Mensalidade {
   public void setValor(double valor) {
     this.valor = valor;
   }
+
+  public Aluno getAluno() {
+    return aluno;
+  }
+
+  public void setAluno(Aluno aluno) {
+    this.aluno = aluno;
+  }
 }

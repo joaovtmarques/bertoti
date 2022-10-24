@@ -47,10 +47,10 @@ Dessa forma, fica claro que podemos precisar distinguir as atividades de program
 
 <p style="font-size: 16px;">Casos de uso</p>
 
-<img src="images/29-08/use-cases.png">
+<img src="images/use-cases.png">
 
 <br>
 
 <p style="font-size: 16px;">Diagrama de classe</p>
 
-<img src="images/22-08/uml.png">
+<img src="images/uml.jpeg">

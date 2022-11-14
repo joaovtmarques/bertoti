@@ -1,40 +1,27 @@
+package com.wktfull.wktfull;
+
+import com.wktfull.wktfull.model.Academia;
+import com.wktfull.wktfull.model.Aluno;
+import com.wktfull.wktfull.model.Mensalidade;
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
-import model.Academia;
-import model.Aluno;
-import model.Mensalidade;
+
+import java.io.IOException;
 
 public class Main extends Application {
-    
     @Override
-    public void start(Stage primaryStage) {
-        Button btn = new Button();
-        btn.setText("Say 'Hello World'");
-        btn.setOnAction(new EventHandler<ActionEvent>() {
-            
-            @Override
-            public void handle(ActionEvent event) {
-                System.out.println("Hello World!");
-            }
-        });
-        
-        StackPane root = new StackPane();
-        root.getChildren().add(btn);
-        
-        Scene scene = new Scene(root, 300, 250);
-        
-        primaryStage.setTitle("Hello World!");
-        primaryStage.setScene(scene);
-        primaryStage.show();
+    public void start(Stage stage) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("hello-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+        stage.setTitle("Hello!");
+        stage.setScene(scene);
+        stage.show();
     }
 
     public static void main(String[] args) {
-        
+
         Academia ac = new Academia();
 
         Aluno a = new Aluno(1, "aluno 1",  1, new Long(1230004000));
@@ -61,5 +48,4 @@ public class Main extends Application {
             System.out.println("Aluno: "+ms.getAluno().getNome());
         }
     }
-
 }

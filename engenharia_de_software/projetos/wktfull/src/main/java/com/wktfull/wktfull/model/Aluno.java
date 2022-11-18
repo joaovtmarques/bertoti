@@ -15,9 +15,7 @@ public class Aluno {
         this.telefone = telefone;
     }
 
-    public Mensalidade buscarMensalidadePorId(Integer id) {
-        Academia ac = new Academia();
-
+    public Mensalidade buscarMensalidadePorId(Academia ac, Integer id) {
         for(Mensalidade m:ac.getMensalidades()) {
             if(m.getId() == id) {
                 return m;
@@ -27,9 +25,7 @@ public class Aluno {
         return null;
     }
 
-    public Mensalidade buscarMensalidadePorAluno(Aluno aluno) {
-        Academia ac = new Academia();
-
+    public Mensalidade buscarMensalidadePorAluno(Academia ac, Aluno aluno) {
         for(Mensalidade m:ac.getMensalidades()) {
             if(m.getAluno() == aluno) {
                 return m;

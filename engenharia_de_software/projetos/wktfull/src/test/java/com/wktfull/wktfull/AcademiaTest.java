@@ -9,6 +9,8 @@ import org.junit.Test;
 
 import java.util.Random;
 
+import com.wktfull.wktfull.helper.ModelBuilderHelper;
+
 public class AcademiaTest {
 
     @Test
@@ -22,7 +24,7 @@ public class AcademiaTest {
     public void AlunosListHasOne() {
         Academia academia = new Academia();
 
-        academia.addAluno(buildAluno(new Random().nextInt()));
+        academia.addAluno(ModelBuilderHelper.buildAluno(new Random().nextInt()));
         assertEquals(1, academia.getAlunos().size());
     }
 
@@ -30,33 +32,23 @@ public class AcademiaTest {
     public void AlunosListHasMany() {
         Academia academia = new Academia();
 
-        academia.addAluno(buildAluno(new Random().nextInt()));
-        academia.addAluno(buildAluno(new Random().nextInt()));
-        academia.addAluno(buildAluno(new Random().nextInt()));
+        academia.addAluno(ModelBuilderHelper.buildAluno(new Random().nextInt()));
+        academia.addAluno(ModelBuilderHelper.buildAluno(new Random().nextInt()));
+        academia.addAluno(ModelBuilderHelper.buildAluno(new Random().nextInt()));
         assertEquals(3, academia.getAlunos().size());
     }
 
     @Test
     public void AlunoByNome() {
         Academia academia = new Academia();
-        Aluno aluno = buildAluno(new Random().nextInt());
+        Aluno aluno = ModelBuilderHelper.buildAluno(new Random().nextInt());
 
         academia.addAluno(aluno);
 
-        assertEquals(aluno, academia.getAlunoByNome(aluno.getNome()));
+        assertEquals(aluno.getNome(), academia.getAlunoByNome(academia, aluno.getNome()).getNome());
     }
 
 
-    public Aluno buildAluno(Integer id) {
-
-        Aluno aluno = new Aluno(
-            id,
-            "NomeAluno",
-            20,
-            Long.valueOf(000000000)
-        );
-
-        return aluno;
-    }
+    
 
 }

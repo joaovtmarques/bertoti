@@ -22,11 +22,9 @@ public class Academia {
         mensalidades.add(mensalidade);
     }
 
-    public Aluno getAlunoByNome(String nome) {
-        Academia ac = new Academia();
-
+    public Aluno getAlunoByNome(Academia ac, String nome) {
         for(Aluno a:ac.getAlunos()) {
-            if(a.getNome() == nome) {
+            if(a.getNome().equals(nome)) {
                 return a;
             }
         }

@@ -32,4 +32,27 @@ public class AlunoRepository implements AlunoRepositoryProtocol {
   public ArrayList<Aluno> findAll() {
     return this.alunos;
   }
+
+  @Override
+  public void delete(Long id) {
+    for(Aluno al : this.alunos) {
+      if(al.getId().equals(id)) {
+        alunos.remove(al);
+      }
+    }
+  }
+
+  @Override
+  public Aluno update(Long id, Aluno aluno) {
+    Aluno updatedAluno = new Aluno();
+
+    for(Aluno al : this.alunos) {
+      if(al.getId().equals(id)) {
+        al = aluno;
+        updatedAluno = al;
+      }
+    }
+
+    return updatedAluno;
+  }
 }

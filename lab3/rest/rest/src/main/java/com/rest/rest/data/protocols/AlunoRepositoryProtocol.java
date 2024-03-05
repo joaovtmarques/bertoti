@@ -10,4 +10,8 @@ public interface AlunoRepositoryProtocol {
   public Aluno create(Aluno aluno);
 
   public ArrayList<Aluno> findAll();
+
+  public void delete(Long id);
+
+  public Aluno update(Long id, Aluno aluno);
 }

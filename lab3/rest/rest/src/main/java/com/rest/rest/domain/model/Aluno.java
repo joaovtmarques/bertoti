@@ -13,6 +13,8 @@ public class Aluno {
 
   private String telefone;
 
+  public Aluno() {}
+
   public Aluno(Long id, String nome, String telefone) {
     this.id = id;
     this.nome = nome;
